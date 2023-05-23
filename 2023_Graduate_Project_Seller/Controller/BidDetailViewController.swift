@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import FirebaseAuth
 
 class BidDetailViewController: UIViewController {
     @IBOutlet weak var BidWritetextField: UITextView!
@@ -19,6 +20,7 @@ class BidDetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     var bidListEntity: BidListEntity? // 이전 화면에서 전달된 데이터를 저장할 변수
     var bidID: String? // 선택된 셀의 ID
+    var uid = Auth.auth().currentUser?.uid
     
     override func viewDidLoad() {
         super.viewDidLoad()
