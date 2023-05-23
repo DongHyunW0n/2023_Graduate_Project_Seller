@@ -21,6 +21,7 @@ class BidDetailViewController: UIViewController {
     var bidListEntity: BidListEntity? // 이전 화면에서 전달된 데이터를 저장할 변수
     var bidID: String? // 선택된 셀의 ID
     var uid = Auth.auth().currentUser?.uid
+    var bidSelected : String = "0" //견적이 선택되었는지 0과 1로 표시
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +57,7 @@ class BidDetailViewController: UIViewController {
                             self.present(alertController, animated: true, completion: nil)
             } else {
                 // 견적 추가
-                bidColumnRef.childByAutoId().setValue(["사업자UID": self.uid, "견적내용": newData]) { error, _ in
+                bidColumnRef.childByAutoId().setValue(["사업자UID": self.uid, "견적내용": newData , "선택여부": self.bidSelected]) { error, _ in
                     if let error = error {
                         // 작업 실패 처리
                         print("Failed to add bid data: \(error.localizedDescription)")
