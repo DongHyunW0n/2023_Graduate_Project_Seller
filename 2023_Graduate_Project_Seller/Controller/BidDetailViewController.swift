@@ -56,7 +56,7 @@ class BidDetailViewController: UIViewController {
                             self.present(alertController, animated: true, completion: nil)
             } else {
                 // 견적 추가
-                bidColumnRef.childByAutoId().setValue(["사업자UID": bidID, "견적내용": newData]) { error, _ in
+                bidColumnRef.childByAutoId().setValue(["사업자UID": self.uid, "견적내용": newData]) { error, _ in
                     if let error = error {
                         // 작업 실패 처리
                         print("Failed to add bid data: \(error.localizedDescription)")
