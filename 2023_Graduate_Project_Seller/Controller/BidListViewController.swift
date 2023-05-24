@@ -76,6 +76,11 @@ public func somefunc(){
 
 
 extension BidViewController : UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 110
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return BidList.count
     }
@@ -86,10 +91,12 @@ extension BidViewController : UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? BidListCell else {
             return UITableViewCell()
         }
+        cell.layer.cornerRadius = cell.frame.height / 3
         
         let celldata : BidListEntity = BidList[indexPath.row]
         cell.titleLabel.text = celldata.title
         cell.addressLabel.text = celldata.address
+        cell.dateLabel.text = "방문희망 : \(celldata.date)"
         cell.selectionStyle = .none
         return cell
     }

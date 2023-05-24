@@ -14,7 +14,10 @@ class BidDetailViewController: UIViewController {
     @IBOutlet weak var BidWritetextField: UITextView!
     @IBOutlet weak var addButton: UIButton!
     
+    @IBOutlet weak var dateStackView: UIStackView!
+    @IBOutlet weak var placeStackView: UIStackView!
     @IBOutlet weak var detailLabel: UITextView!
+    @IBOutlet weak var detailStackView: UIStackView!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
@@ -25,6 +28,25 @@ class BidDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        BidWritetextField.layer.borderWidth = 1.0 // 경계선 두께 설정
+
+        BidWritetextField.layer.borderColor = UIColor.systemGray3.cgColor
+        
+        placeStackView.layer.borderWidth = 0.5 // 경계선 두께 설정
+
+        placeStackView.layer.borderColor = UIColor.systemGray3.cgColor
+        placeStackView.layer.cornerRadius = 10
+        
+        dateStackView.layer.borderWidth = 0.5 // 경계선 두께 설정
+
+        dateStackView.layer.borderColor = UIColor.systemGray3.cgColor
+        dateStackView.layer.cornerRadius = 10
+        
+        detailStackView.layer.borderWidth = 0.5 // 경계선 두께 설정
+
+        detailStackView.layer.borderColor = UIColor.systemGray3.cgColor
+        detailStackView.layer.cornerRadius = 10
         
         timeLabel.text = bidListEntity?.date
         placeLabel.text = bidListEntity?.address
@@ -46,7 +68,7 @@ class BidDetailViewController: UIViewController {
         let bidColumnRef = bidRef.child("받은 견적")
         
         // 특정 사업자의 견적 내용이 있는지 확인
-        bidColumnRef.queryOrdered(byChild: "사업자UID").queryEqual(toValue: bidID).observeSingleEvent(of: .value) { snapshot in
+        bidColumnRef.queryOrdered(byChild: "사업자UID").queryEqual(toValue: uid).observeSingleEvent(of: .value) { snapshot in
             if snapshot.exists() {
                 // 이미 견적 내용이 있는 경우
                 print("이미 견적을 작성했습니다.")
