@@ -31,6 +31,9 @@
                                         <rect key="frame" x="0.0" y="122.99999999999997" width="333" height="110"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="button2"/>
+                                        <connections>
+                                            <segue destination="zzC-vO-0i0" kind="show" id="wKc-eZ-Cvq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -258,7 +261,7 @@
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="견적작성작성" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="o4T-Hv-cfi">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="o4T-Hv-cfi">
                                         <rect key="frame" x="0.0" y="57" width="363" height="130"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -344,6 +347,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6TM-sA-90x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3098" y="1134"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7jG-QE-yLJ">
+            <objects>
+                <viewController id="zzC-vO-0i0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YY8-7k-rYI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lan-gY-mh2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6Ma-he-43p"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uG1-qn-EUC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2266" y="1105"/>
         </scene>
         <!--사장님 아이디 로그인-->
         <scene sceneID="5bd-Qm-mhH">
