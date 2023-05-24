@@ -25,6 +25,7 @@ class BidDetailViewController: UIViewController {
     var bidID: String? // 선택된 셀의 ID
     var uid = Auth.auth().currentUser?.uid
     var bidSelected : String = "0" //견적이 선택되었는지 0과 1로 표시
+    var companyName : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +65,8 @@ class BidDetailViewController: UIViewController {
             return
         }
         
+        
+        
         let bidRef = ref.child(bidID)
         let bidColumnRef = bidRef.child("받은 견적")
         
@@ -78,8 +81,22 @@ class BidDetailViewController: UIViewController {
                             alertController.addAction(okAction)
                             self.present(alertController, animated: true, completion: nil)
             } else {
+                
+                let ref1 = Database.database().reference()
+                
+                var companyName : String?
+                
+                ref1.child("Users").child(self.uid ?? "UID ERROR").child("name").observeSingleEvent(of: .value) { (snapshot, _) in //옵셔빙 싱글 이벤트는 한번만 받아옴.
+                    if let name = snapshot.value as? String {
+                        print("name: \(name)")
+                        companyName = name
+                    }
+                    else{
+                        print("회사명 읽어오는거 에러")
+                    }
+                }
                 // 견적 추가
-                bidColumnRef.childByAutoId().setValue(["사업자UID": self.uid, "견적내용": newData , "선택여부": self.bidSelected]) { error, _ in
+                bidColumnRef.childByAutoId().setValue(["사업자UID": self.uid, "견적내용": newData , "선택여부": self.bidSelected ,"회사명" : "\(companyName ?? "회사명 에러")"]) { error, _ in
                     if let error = error {
                         // 작업 실패 처리
                         print("Failed to add bid data: \(error.localizedDescription)")
