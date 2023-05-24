@@ -90,26 +90,39 @@ class BidDetailViewController: UIViewController {
                     if let name = snapshot.value as? String {
                         print("name: \(name)")
                         companyName = name
+                        
+                        bidColumnRef.childByAutoId().setValue(["사업자UID": self.uid, "견적내용": newData , "선택여부": self.bidSelected ,"회사명" : "\(companyName ?? "회사명 에러")"]) { error, _ in
+                            if let error = error {
+                                // 작업 실패 처리
+                                print("Failed to add bid data: \(error.localizedDescription)")
+                            } else {
+                                // 작업 성공 처리
+                                self.presentAlert()
+
+                                print("견적 추가 완료")
+                                
+                                
+                            }
+                            
+                        }
                     }
                     else{
                         print("회사명 읽어오는거 에러")
                     }
                 }
-                // 견적 추가
-                bidColumnRef.childByAutoId().setValue(["사업자UID": self.uid, "견적내용": newData , "선택여부": self.bidSelected ,"회사명" : "\(companyName ?? "회사명 에러")"]) { error, _ in
-                    if let error = error {
-                        // 작업 실패 처리
-                        print("Failed to add bid data: \(error.localizedDescription)")
-                    } else {
-                        // 작업 성공 처리
-                        print("견적 추가 완료")
-                        
-                        // 추가 작업 완료 후 필요한 후속 작업 수행
-                    }
-                    
-                }
+              
             }
         }
+    }
+    
+    fileprivate func presentAlert () {
+        
+        let alert = UIAlertController(title: "완료", message: "등록 완료 되었습니다." , preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            self.navigationController?.popViewController(animated: true)
+        }))
+        self.present(alert, animated: true, completion: nil)
+        
     }
 }
 
