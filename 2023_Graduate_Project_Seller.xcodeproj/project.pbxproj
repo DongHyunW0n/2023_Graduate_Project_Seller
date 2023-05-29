@@ -10,6 +10,7 @@
 		19E8F7CB0E83005CD31F2572 /* Pods_2023_Graduate_Project_Seller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319E78721ED21BE3E7D79FF7 /* Pods_2023_Graduate_Project_Seller.framework */; };
 		8F39DDED2A19F332001854D5 /* BidListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F39DDEC2A19F332001854D5 /* BidListViewController.swift */; };
 		8F3C25012A1EE82300422072 /* MyBidListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3C25002A1EE82300422072 /* MyBidListViewController.swift */; };
+		8F89ACCE2A2500BE007D681B /* MyBidListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F89ACCD2A2500BE007D681B /* MyBidListDetailViewController.swift */; };
 		8F9350E82A1F16AA00784AE3 /* MyBidListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9350E72A1F16AA00784AE3 /* MyBidListCell.swift */; };
 		8FBD1CA02A1C2E2600556D2A /* BidDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBD1C9F2A1C2E2600556D2A /* BidDetailViewController.swift */; };
 		8FBD1CA22A1CD69600556D2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBD1CA12A1CD69600556D2A /* LoginViewController.swift */; };
@@ -30,6 +31,7 @@
 		66EF760059CC569C3C91E259 /* Pods-2023_Graduate_Project_Seller.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2023_Graduate_Project_Seller.debug.xcconfig"; path = "Target Support Files/Pods-2023_Graduate_Project_Seller/Pods-2023_Graduate_Project_Seller.debug.xcconfig"; sourceTree = "<group>"; };
 		8F39DDEC2A19F332001854D5 /* BidListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidListViewController.swift; sourceTree = "<group>"; };
 		8F3C25002A1EE82300422072 /* MyBidListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBidListViewController.swift; sourceTree = "<group>"; };
+		8F89ACCD2A2500BE007D681B /* MyBidListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBidListDetailViewController.swift; sourceTree = "<group>"; };
 		8F9350E72A1F16AA00784AE3 /* MyBidListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBidListCell.swift; sourceTree = "<group>"; };
 		8FBD1C9F2A1C2E2600556D2A /* BidDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidDetailViewController.swift; sourceTree = "<group>"; };
 		8FBD1CA12A1CD69600556D2A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				8FBD1CA12A1CD69600556D2A /* LoginViewController.swift */,
 				8FBD1CA32A1CD6E400556D2A /* EnterEmailViewController.swift */,
 				8F3C25002A1EE82300422072 /* MyBidListViewController.swift */,
+				8F89ACCD2A2500BE007D681B /* MyBidListDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				8FBD1CA02A1C2E2600556D2A /* BidDetailViewController.swift in Sources */,
 				8F39DDED2A19F332001854D5 /* BidListViewController.swift in Sources */,
 				8FD14EE42A18AD420001F4DD /* BidListCell.swift in Sources */,
+				8F89ACCE2A2500BE007D681B /* MyBidListDetailViewController.swift in Sources */,
 				8FD14ECB2A18A8770001F4DD /* AppDelegate.swift in Sources */,
 				8FBD1CA42A1CD6E400556D2A /* EnterEmailViewController.swift in Sources */,
 				8F9350E82A1F16AA00784AE3 /* MyBidListCell.swift in Sources */,
