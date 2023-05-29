@@ -97,7 +97,7 @@ class MyBidListViewController: UIViewController {
             
                 print("내가 확정받은 견적의 개수 : \(self.myFinishedListEntity.count)")
                 
-                print("확정된 견적들에 대한 메타데이터 \(self.myFinishedListEntity)")
+                print("확정된 견적들에 대한 딕셔너리 값들 :  \(self.myFinishedListEntity)")
                 
                 
 
