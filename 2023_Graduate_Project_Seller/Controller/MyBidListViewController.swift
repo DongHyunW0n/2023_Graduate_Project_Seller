@@ -114,7 +114,7 @@ extension MyBidListViewController: UITableViewDataSource {
         let bid = myBidList[indexPath.row]
         let bidPost = bidPostList[indexPath.row]
 
-        cell.titleLabel.text = "견적 : \(bid.detail)"
+        cell.titleLabel.text = "견적 : \(bidPost.title)"
         cell.addressLabel.text = bidPost.address
         cell.timeLabel.text = "방문요청 :\(bidPost.date)"
         cell.numberLabel.text = "고객 연락처 :\(bidPost.number)"

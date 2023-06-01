@@ -16,26 +16,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="Chr-ZT-cQD">
-                                <rect key="frame" x="30" y="233.33333333333337" width="333" height="233"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="Chr-ZT-cQD">
+                                <rect key="frame" x="30" y="233.33333333333337" width="333" height="200"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBC-yg-tZJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="110"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="93.666666666666671"/>
+                                        <color key="backgroundColor" red="0.71676682810000003" green="0.91532703260000003" blue="0.94074213500000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="button1"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="견적 입찰">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="tKb-TH-Lgj" kind="show" id="e5Y-Ld-gKy"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WW-Hm-l0d">
-                                        <rect key="frame" x="0.0" y="122.99999999999997" width="333" height="110"/>
+                                        <rect key="frame" x="0.0" y="106.66666666666666" width="333" height="93.333333333333343"/>
+                                        <color key="backgroundColor" red="0.71676682810000003" green="0.91532703260000003" blue="0.94074213500000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="button2"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="입찰 내역">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="zzC-vO-0i0" kind="show" id="wKc-eZ-Cvq"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="SbK-Qu-6wm"/>
+                                </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사장님 반갑습니다 !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EzJ-r2-VqH">
                                 <rect key="frame" x="20" y="148" width="353" height="35.333333333333343"/>
@@ -44,7 +55,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인한 이메일 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQH-BS-AX9">
-                                <rect key="frame" x="136.33333333333334" y="546.33333333333337" width="120.66666666666666" height="20.333333333333371"/>
+                                <rect key="frame" x="136.33333333333334" y="513.33333333333337" width="120.66666666666666" height="20.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -749,8 +760,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="button1" width="161" height="96"/>
-        <image name="button2" width="161" height="96"/>
         <image name="spannerImage" width="360" height="360"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
