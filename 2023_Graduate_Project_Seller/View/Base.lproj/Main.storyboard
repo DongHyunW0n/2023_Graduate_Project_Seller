@@ -20,11 +20,13 @@
                                 <rect key="frame" x="30" y="233.33333333333337" width="333" height="200"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBC-yg-tZJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="93.666666666666671"/>
-                                        <color key="backgroundColor" red="0.71676682810000003" green="0.91532703260000003" blue="0.94074213500000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="58"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="견적 입찰">
+                                            <backgroundConfiguration key="background" cornerRadius="20">
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                            </backgroundConfiguration>
                                             <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -32,15 +34,31 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WW-Hm-l0d">
-                                        <rect key="frame" x="0.0" y="106.66666666666666" width="333" height="93.333333333333343"/>
-                                        <color key="backgroundColor" red="0.71676682810000003" green="0.91532703260000003" blue="0.94074213500000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="0.0" y="70.999999999999972" width="333" height="58"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="입찰 내역">
+                                        <buttonConfiguration key="configuration" style="plain" title="낙찰 내역">
+                                            <backgroundConfiguration key="background" cornerRadius="20">
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                            </backgroundConfiguration>
                                             <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <segue destination="zzC-vO-0i0" kind="show" id="wKc-eZ-Cvq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VH1-Ag-KAH">
+                                        <rect key="frame" x="0.0" y="141.99999999999997" width="333" height="58"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="고객과 채팅">
+                                            <backgroundConfiguration key="background" cornerRadius="20">
+                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Vfd-qI-46t" kind="show" id="q1i-hO-KXq"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -54,21 +72,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인한 이메일 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQH-BS-AX9">
-                                <rect key="frame" x="136.33333333333334" y="513.33333333333337" width="120.66666666666666" height="20.333333333333371"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.97254901959999995" green="0.96862745100000003" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Chr-ZT-cQD" secondAttribute="trailing" constant="30" id="4sZ-8u-MHS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EzJ-r2-VqH" secondAttribute="trailing" constant="20" id="9MA-Lj-kx0"/>
-                            <constraint firstItem="gQH-BS-AX9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ITd-Wi-MLK"/>
                             <constraint firstItem="EzJ-r2-VqH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="Q3j-dz-FOP"/>
-                            <constraint firstItem="gQH-BS-AX9" firstAttribute="top" secondItem="8WW-Hm-l0d" secondAttribute="bottom" constant="80" id="QT2-Hy-KKG"/>
                             <constraint firstItem="Chr-ZT-cQD" firstAttribute="top" secondItem="EzJ-r2-VqH" secondAttribute="bottom" constant="50" id="Qn1-sF-BTR"/>
                             <constraint firstItem="EzJ-r2-VqH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="TLA-rV-KbA"/>
                             <constraint firstItem="Chr-ZT-cQD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Xow-ne-ch4"/>
@@ -82,7 +92,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="loginEmailLabel" destination="gQH-BS-AX9" id="lgW-IJ-PTM"/>
                         <outlet property="logoutButton" destination="lcY-2v-kko" id="sLe-tY-LEx"/>
                         <outlet property="welcomeLabel" destination="EzJ-r2-VqH" id="C7I-xx-xK1"/>
                     </connections>
@@ -155,9 +164,11 @@
                                 <color key="textColor" systemColor="systemMintColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="고객의 연락처는 개인정보 보호를 위해 제시하신 견적이 고객에 의해 채택되면 확인 가능합니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sd1-6k-wNp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sd1-6k-wNp">
                                 <rect key="frame" x="10" y="166.66666666666666" width="373" height="29.333333333333343"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <string key="text">고객의 정확한 주소와 연락처는 개인정보 보호를 위해 
+제시하신 견적이 고객에 의해 채택되면 확인 가능합니다.</string>
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -758,6 +769,153 @@
             </objects>
             <point key="canvasLocation" x="-581" y="993"/>
         </scene>
+        <!--Chat List View Controller-->
+        <scene sceneID="Qyr-0Z-YNj">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Vfd-qI-46t" customClass="ChatListViewController" customModule="_023_Graduate_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pGP-Ly-Oqt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사장님과 매칭된 고객에게 채팅이 가능합니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rik-pI-iJm">
+                                <rect key="frame" x="10" y="143" width="373" height="40"/>
+                                <color key="backgroundColor" red="0.71676682810000003" green="0.91532703260000003" blue="0.94074213500000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Oux-fb-8Vx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Inh-cU-qg8">
+                                <rect key="frame" x="0.0" y="183" width="393" height="635"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="106" id="XdV-N2-qjO" customClass="ChatListCell" customModule="_023_Graduate_Project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="106"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XdV-N2-qjO" id="yKf-Ow-axD">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="106"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="고객 연락처" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6F-zY-N4a">
+                                                    <rect key="frame" x="30" y="31" width="78" height="44"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="내가 요청한 견적견적견적견적견적견적견적견적견적견적" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5F-RV-wL5">
+                                                    <rect key="frame" x="158" y="31" width="225" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="방문요청시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDM-ln-Y6X">
+                                                    <rect key="frame" x="315.33333333333331" y="74" width="67.666666666666686" height="15.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="r5F-RV-wL5" firstAttribute="top" secondItem="yKf-Ow-axD" secondAttribute="topMargin" constant="20" id="3Ac-LM-JHY"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="r5F-RV-wL5" secondAttribute="bottom" constant="20" id="9Pl-aL-9mW"/>
+                                                <constraint firstItem="r5F-RV-wL5" firstAttribute="leading" secondItem="n6F-zY-N4a" secondAttribute="trailing" constant="50" id="IdY-Ap-X1S"/>
+                                                <constraint firstItem="dDM-ln-Y6X" firstAttribute="top" secondItem="r5F-RV-wL5" secondAttribute="bottom" constant="-1" id="Mpp-bb-Cf4"/>
+                                                <constraint firstItem="n6F-zY-N4a" firstAttribute="leading" secondItem="yKf-Ow-axD" secondAttribute="leadingMargin" constant="10" id="N7W-uY-5RI"/>
+                                                <constraint firstItem="n6F-zY-N4a" firstAttribute="top" secondItem="yKf-Ow-axD" secondAttribute="topMargin" constant="20" id="OVg-gn-tZD"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="n6F-zY-N4a" secondAttribute="bottom" constant="20" id="g5x-kp-axl"/>
+                                                <constraint firstItem="r5F-RV-wL5" firstAttribute="trailing" secondItem="yKf-Ow-axD" secondAttribute="trailingMargin" constant="10" id="kW1-ma-BAY"/>
+                                                <constraint firstItem="dDM-ln-Y6X" firstAttribute="trailing" secondItem="r5F-RV-wL5" secondAttribute="trailing" id="pB5-pI-nfn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="companyLabel" destination="n6F-zY-N4a" id="3JS-Ej-217"/>
+                                            <outlet property="detailLabel" destination="r5F-RV-wL5" id="HMN-h5-XGC"/>
+                                            <outlet property="timeLabel" destination="dDM-ln-Y6X" id="4tP-yw-tLH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PiW-yE-Bjr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PiW-yE-Bjr" firstAttribute="bottom" secondItem="Inh-cU-qg8" secondAttribute="bottom" id="O8Q-i0-qlY"/>
+                            <constraint firstItem="rik-pI-iJm" firstAttribute="leading" secondItem="PiW-yE-Bjr" secondAttribute="leading" constant="10" id="UvW-Jk-nHs"/>
+                            <constraint firstItem="rik-pI-iJm" firstAttribute="top" secondItem="PiW-yE-Bjr" secondAttribute="top" constant="40" id="WRF-jj-xyn"/>
+                            <constraint firstItem="Inh-cU-qg8" firstAttribute="top" secondItem="rik-pI-iJm" secondAttribute="bottom" id="Zz6-gA-OHp"/>
+                            <constraint firstItem="Inh-cU-qg8" firstAttribute="leading" secondItem="PiW-yE-Bjr" secondAttribute="leading" id="dS9-jU-GRw"/>
+                            <constraint firstItem="PiW-yE-Bjr" firstAttribute="trailing" secondItem="rik-pI-iJm" secondAttribute="trailing" constant="10" id="quQ-l6-Fj3"/>
+                            <constraint firstItem="PiW-yE-Bjr" firstAttribute="trailing" secondItem="Inh-cU-qg8" secondAttribute="trailing" id="zGs-js-kCn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yIU-Sw-PFE"/>
+                    <connections>
+                        <outlet property="TableView" destination="Inh-cU-qg8" id="e1P-Pn-KMl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="biU-M8-Uvz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3091" y="1113"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="EIK-tv-DTB">
+            <objects>
+                <viewController storyboardIdentifier="ChatView" id="AaO-Zm-2ux" customClass="ChatViewController" customModule="_023_Graduate_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ubB-32-wao">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="41O-2m-6vM">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="duR-Y6-OY5">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="709"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="y88-tN-dOt">
+                                        <rect key="frame" x="0.0" y="709" width="393" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="siO-PD-vWk">
+                                                <rect key="frame" x="8" y="8" width="313.33333333333331" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3q-v6-aaz">
+                                                <rect key="frame" x="331.33333333333331" y="8" width="53.666666666666686" height="34"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="전송"/>
+                                                <connections>
+                                                    <action selector="sendButtonTabbed:" destination="AaO-Zm-2ux" eventType="touchUpInside" id="Hdn-RB-gyd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="0.36025455299999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Bqn-9n-SoA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="41O-2m-6vM" firstAttribute="leading" secondItem="Bqn-9n-SoA" secondAttribute="leading" id="BHz-Ek-q88"/>
+                            <constraint firstItem="41O-2m-6vM" firstAttribute="top" secondItem="Bqn-9n-SoA" secondAttribute="top" id="Vkr-DR-p76"/>
+                            <constraint firstItem="41O-2m-6vM" firstAttribute="trailing" secondItem="Bqn-9n-SoA" secondAttribute="trailing" id="Xo6-Xl-vKz"/>
+                            <constraint firstItem="Bqn-9n-SoA" firstAttribute="bottom" secondItem="41O-2m-6vM" secondAttribute="bottom" id="fud-Is-Zav"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chatTableView" destination="duR-Y6-OY5" id="DmI-dM-iMv"/>
+                        <outlet property="messageSendButton" destination="G3q-v6-aaz" id="YFT-gr-MXy"/>
+                        <outlet property="messageTextField" destination="siO-PD-vWk" id="fDz-16-rpS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eFC-eL-w9C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3978" y="1099"/>
+        </scene>
     </scenes>
     <resources>
         <image name="spannerImage" width="360" height="360"/>
@@ -775,6 +933,12 @@
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

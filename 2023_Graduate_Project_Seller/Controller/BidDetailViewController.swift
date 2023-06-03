@@ -50,7 +50,47 @@ class BidDetailViewController: UIViewController {
         detailStackView.layer.cornerRadius = 10
         
         timeLabel.text = bidListEntity?.date
-        placeLabel.text = bidListEntity?.address
+        
+        
+        
+        
+        let address = bidListEntity?.address ?? "address ERROR"
+        
+        func replaceNumbersWithAsterisks(in string: String) -> String {
+            let numberCharacterSet = CharacterSet.decimalDigits
+            let asterisk = "*"
+
+            var result = ""
+            var numberString = ""
+            
+            for char in string {
+                if char.unicodeScalars.allSatisfy(numberCharacterSet.contains) {
+                    // 숫자일 경우
+                    numberString.append(char)
+                } else {
+                    // 숫자가 아닐 경우
+                    if !numberString.isEmpty {
+                        // 숫자가 있는 경우 대치
+                        result.append(asterisk)
+                        numberString = ""
+                    }
+                    result.append(char)
+                }
+            }
+            
+            if !numberString.isEmpty {
+                // 문자열이 끝났는데 숫자가 있는 경우 대치
+                result.append(asterisk)
+            }
+            
+            return result
+        }
+
+        let replacedAddress = replaceNumbersWithAsterisks(in: address)
+        print(replacedAddress)
+        
+        placeLabel.text = replacedAddress
+        
         detailLabel.text = bidListEntity?.title
         
         if let imageURL = bidListEntity?.imageURL {

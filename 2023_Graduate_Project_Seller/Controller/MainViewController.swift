@@ -42,7 +42,6 @@ class MainViewController: UIViewController {
         print(uid ?? "UID ERROR")
         
         
-        loginEmailLabel.text = "로그인한 계정 :\(email ?? "ERROR")"
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
         self.navigationItem.setHidesBackButton(true, animated: false) // 네비게이션 백버튼 숨기기 ~
