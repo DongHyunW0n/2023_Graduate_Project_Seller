@@ -25,7 +25,7 @@ let ref = Database.database().reference().child("ServiceRequest")
 
 class BidViewController: UIViewController {
     
-
+    
     
     var BidList : [BidListEntity] = []
     
@@ -36,34 +36,33 @@ class BidViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
         tableView.dataSource = self
         tableView.delegate = self
         
-        ref.observe(.value) {snapshot in
-            
-            
+        ref.observe(.value) { snapshot in
             self.BidList = []
             
             for child in snapshot.children {
-                
-                guard let childSnapshot = child as? DataSnapshot else{return}
+                guard let childSnapshot = child as? DataSnapshot else { return }
                 let value = childSnapshot.value as? NSDictionary
+                let isFinished = value?["끝남 여부"] as? String ?? ""
+                
+                if isFinished == "1" {
+                    continue // 끝남 여부가 1인 경우, 리스트에 추가하지 않고 다음 데이터로 넘어감
+                }
+                
                 let title = value?["상세 설명"] as? String ?? ""
-                let address = value?["요청 위치"]as? String ?? ""
-                let URL = value?["사진 URL"]as? String ?? ""
-                let date = value?["요청 일시"]as? String ?? ""
+                let address = value?["요청 위치"] as? String ?? ""
+                let URL = value?["사진 URL"] as? String ?? ""
+                let date = value?["요청 일시"] as? String ?? ""
                 
                 let fetchedBidList = BidListEntity(id: childSnapshot.key, title: title, address: address, imageURL: URL, date: date)
-                
                 self.BidList.append(fetchedBidList)
-            
+                
                 print(title)
-//                print(fetchedBidList)
             }
             
             self.tableView.reloadData()
-            
         }
     }
 }
