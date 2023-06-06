@@ -172,7 +172,7 @@ extension ChatViewController : UITableViewDataSource {
             cell.detailLabel.textAlignment = .right
 
 
-            cell.detailLabel.text = "나 : \(celldata.message)"
+            cell.detailLabel.text = "사장님 : \(celldata.message)"
             cell.timeLabel.text = celldata.timeStamp
             
         }else{
@@ -182,7 +182,7 @@ extension ChatViewController : UITableViewDataSource {
             cell.timeLabel.textAlignment = .left
             cell.detailLabel.textAlignment = .left
 
-            cell.detailLabel.text = "상대 : \(celldata.message)"
+            cell.detailLabel.text = "고객 : \(celldata.message)"
             cell.timeLabel.text = celldata.timeStamp
         }
         
