@@ -49,10 +49,9 @@
 		8F8E77AC2AFE7431001BDB9A /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 8F8E77AB2AFE7431001BDB9A /* RxRelay */; };
 		8F8E77B02AFE745F001BDB9A /* SOYO Maple Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F8E77AE2AFE745F001BDB9A /* SOYO Maple Regular.otf */; };
 		8F8E77B12AFE745F001BDB9A /* SOYO Maple Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F8E77AF2AFE745F001BDB9A /* SOYO Maple Bold.otf */; };
+		8F8E77B32AFE76B3001BDB9A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E77B22AFE76B3001BDB9A /* LoginViewController.swift */; };
 		8F9350E82A1F16AA00784AE3 /* MyBidListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9350E72A1F16AA00784AE3 /* MyBidListCell.swift */; };
 		8FBD1CA02A1C2E2600556D2A /* BidDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBD1C9F2A1C2E2600556D2A /* BidDetailViewController.swift */; };
-		8FBD1CA22A1CD69600556D2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBD1CA12A1CD69600556D2A /* LoginViewController.swift */; };
-		8FBD1CA42A1CD6E400556D2A /* EnterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBD1CA32A1CD6E400556D2A /* EnterEmailViewController.swift */; };
 		8FD14ECB2A18A8770001F4DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD14ECA2A18A8770001F4DD /* AppDelegate.swift */; };
 		8FD14ECD2A18A8770001F4DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD14ECC2A18A8770001F4DD /* SceneDelegate.swift */; };
 		8FD14ECF2A18A8770001F4DD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD14ECE2A18A8770001F4DD /* MainViewController.swift */; };
@@ -74,10 +73,9 @@
 		8F89ACCD2A2500BE007D681B /* MyBidListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBidListDetailViewController.swift; sourceTree = "<group>"; };
 		8F8E77AE2AFE745F001BDB9A /* SOYO Maple Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SOYO Maple Regular.otf"; sourceTree = "<group>"; };
 		8F8E77AF2AFE745F001BDB9A /* SOYO Maple Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SOYO Maple Bold.otf"; sourceTree = "<group>"; };
+		8F8E77B22AFE76B3001BDB9A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8F9350E72A1F16AA00784AE3 /* MyBidListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBidListCell.swift; sourceTree = "<group>"; };
 		8FBD1C9F2A1C2E2600556D2A /* BidDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidDetailViewController.swift; sourceTree = "<group>"; };
-		8FBD1CA12A1CD69600556D2A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		8FBD1CA32A1CD6E400556D2A /* EnterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailViewController.swift; sourceTree = "<group>"; };
 		8FD14EC72A18A8770001F4DD /* 2023_Graduate_Project_Seller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2023_Graduate_Project_Seller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD14ECA2A18A8770001F4DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FD14ECC2A18A8770001F4DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 			children = (
 				8FD14EC92A18A8770001F4DD /* 2023_Graduate_Project_Seller */,
 				8FD14EC82A18A8770001F4DD /* Products */,
-				B12A628282F79B9337CBB1A6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -202,21 +199,13 @@
 				8FD14ECE2A18A8770001F4DD /* MainViewController.swift */,
 				8F39DDEC2A19F332001854D5 /* BidListViewController.swift */,
 				8FBD1C9F2A1C2E2600556D2A /* BidDetailViewController.swift */,
-				8FBD1CA12A1CD69600556D2A /* LoginViewController.swift */,
-				8FBD1CA32A1CD6E400556D2A /* EnterEmailViewController.swift */,
 				8F3C25002A1EE82300422072 /* MyBidListViewController.swift */,
 				8F89ACCD2A2500BE007D681B /* MyBidListDetailViewController.swift */,
 				8F7FDFE42A2B892300D56569 /* ChatListViewController.swift */,
 				8F7FDFE62A2B893A00D56569 /* ChatViewController.swift */,
+				8F8E77B22AFE76B3001BDB9A /* LoginViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		B12A628282F79B9337CBB1A6 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,7 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FBD1CA22A1CD69600556D2A /* LoginViewController.swift in Sources */,
+				8F8E77B32AFE76B3001BDB9A /* LoginViewController.swift in Sources */,
 				8FD14ECF2A18A8770001F4DD /* MainViewController.swift in Sources */,
 				8FBD1CA02A1C2E2600556D2A /* BidDetailViewController.swift in Sources */,
 				8F39DDED2A19F332001854D5 /* BidListViewController.swift in Sources */,
@@ -340,7 +329,6 @@
 				8FD14EE42A18AD420001F4DD /* BidListCell.swift in Sources */,
 				8F89ACCE2A2500BE007D681B /* MyBidListDetailViewController.swift in Sources */,
 				8FD14ECB2A18A8770001F4DD /* AppDelegate.swift in Sources */,
-				8FBD1CA42A1CD6E400556D2A /* EnterEmailViewController.swift in Sources */,
 				8F9350E82A1F16AA00784AE3 /* MyBidListCell.swift in Sources */,
 				8F7FDFDF2A2B887E00D56569 /* ChatListCell.swift in Sources */,
 				8F7FDFE12A2B889200D56569 /* ChatCell.swift in Sources */,

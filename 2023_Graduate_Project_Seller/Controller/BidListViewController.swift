@@ -90,7 +90,7 @@ extension BidViewController : UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? BidListCell else {
             return UITableViewCell()
         }
-        cell.layer.cornerRadius = cell.frame.height / 3
+        cell.layer.cornerRadius = 10
         
         let celldata : BidListEntity = BidList[indexPath.row]
         cell.titleLabel.text = celldata.title
@@ -131,7 +131,7 @@ extension BidViewController : UITableViewDataSource {
         print(replacedAddress)
 
         cell.addressLabel.text = replacedAddress
-        cell.dateLabel.text = "방문희망 : \(celldata.date)"
+        cell.dateLabel.text = "희망 : \(celldata.date)"
         cell.selectionStyle = .none
         return cell
     }
