@@ -12,7 +12,7 @@ import FirebaseAuth
 struct MyBidListEntity {
     var title: String
     var address: String
-    var imageURL: String
+    var MediaURL: String
     var date: String
     var number: String
 }
@@ -26,7 +26,7 @@ struct FinishedEntity {
 struct BidPostEntity {
     var title: String
     var address: String
-    var imageURL: String
+    var MediaURL: String
     var date: String
     var number: String
 }
@@ -82,11 +82,11 @@ class MyBidListViewController: UIViewController {
                     if let postValue = postSnapshot.value as? NSDictionary {
                         let postTitle = postValue["상세 설명"] as? String ?? ""
                         let postAddress = postValue["요청 위치"] as? String ?? ""
-                        let postImageURL = postValue["사진 URL"] as? String ?? ""
+                        let postImageURL = postValue["MediaURL"] as? String ?? ""
                         let postDate = postValue["요청 일시"] as? String ?? ""
                         let postNumber = postValue["연락처"] as? String ?? ""
 
-                        let bidPost = BidPostEntity(title: postTitle, address: postAddress, imageURL: postImageURL, date: postDate, number: postNumber)
+                        let bidPost = BidPostEntity(title: postTitle, address: postAddress, MediaURL: postImageURL, date: postDate, number: postNumber)
                         bidPosts.append(bidPost)
                         print(bidPosts)
 
@@ -118,6 +118,7 @@ extension MyBidListViewController: UITableViewDataSource {
         cell.addressLabel.text = bidPost.address
         cell.timeLabel.text = "방문 :\(bidPost.date)"
         cell.numberLabel.text = "\(bidPost.number)"
+        
 
         cell.selectionStyle = .none
 
@@ -138,6 +139,7 @@ extension MyBidListViewController: UITableViewDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let bidDetailVC = storyboard.instantiateViewController(withIdentifier: "MyBidListDetailViewController") as? MyBidListDetailViewController {
             bidDetailVC.bidPostList = selectedBid
+            
            
             navigationController?.pushViewController(bidDetailVC, animated: true)
             

@@ -16,6 +16,7 @@ class BidDetailViewController: UIViewController {
     @IBOutlet weak var BidWritetextField: UITextView!
     @IBOutlet weak var addButton: UIButton!
     
+    @IBOutlet weak var lodingLabel: UILabel!
     @IBOutlet weak var dateStackView: UIStackView!
     @IBOutlet weak var placeStackView: UIStackView!
     @IBOutlet weak var detailLabel: UILabel!
@@ -164,6 +165,7 @@ class BidDetailViewController: UIViewController {
                   DispatchQueue.main.async {
                       // 비동기적으로 이미지 로딩 후 UI 업데이트
                       self.imageView.image = thumbnailImage
+                      self.lodingLabel.isHidden = true
                   }
               } catch let error {
                   print("동영상 섬네일을 가져오는 데 실패했습니다: \(error.localizedDescription)")

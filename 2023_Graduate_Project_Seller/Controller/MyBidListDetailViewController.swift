@@ -16,6 +16,7 @@ class MyBidListDetailViewController: UIViewController {
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     
+    @IBOutlet weak var loadingLabel: UILabel!
     @IBOutlet weak var thumbNailImage: UIImageView!
     
     var bidPostList: BidPostEntity?
@@ -24,9 +25,12 @@ class MyBidListDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if let imageURL = bidPostList?.imageURL {
-//            imageView.loadImageFromURL(imageURL)
-//        }
+        var mediaURL = bidPostList?.MediaURL
+
+        
+        if let mediaURL = bidPostList?.MediaURL {
+                    loadVideoThumbnail(from: URL(string: mediaURL)!)
+                }
         updateUI()
 
     }
@@ -40,30 +44,49 @@ class MyBidListDetailViewController: UIViewController {
                 numberLabel.text = bidPost.number // 연락처 설정
             }
         }
+    
+    func loadVideoThumbnail(from videoURL: URL) {
+           DispatchQueue.global().async { [weak self] in
+               guard let self = self else { return }
+
+               let asset = AVAsset(url: videoURL)
+               let assetGenerator = AVAssetImageGenerator(asset: asset)
+
+               assetGenerator.appliesPreferredTrackTransform = true
+
+               do {
+                   let thumbnailCGImage = try assetGenerator.copyCGImage(at: CMTimeMake(value: 1, timescale: 60), actualTime: nil)
+                   let thumbnailImage = UIImage(cgImage: thumbnailCGImage)
+
+                   DispatchQueue.main.async {
+                       // 비동기적으로 이미지 로딩 후 UI 업데이트
+                       self.thumbNailImage.image = thumbnailImage
+                       self.loadingLabel.isHidden = true
+                   }
+               } catch let error {
+                   print("동영상 섬네일을 가져오는 데 실패했습니다: \(error.localizedDescription)")
+                   // (optional) 실패 시 추가적인 처리 가능
+               }
+           }
+       }
+    
+    func playVideo(from videoURL: URL) {
+           let player = AVPlayer(url: videoURL)
+           let playerViewController = AVPlayerViewController()
+
+           playerViewController.player = player
+
+           present(playerViewController, animated: true) {
+               playerViewController.player?.play()
+           }
+       }
 
     @IBAction func playButton(_ sender: UIButton) {
-        
-        
-        
-    }
-}
-
-
-extension UIImageView {
-    func loadImageFromURL1(_ urlString: String) {
-        guard let url = URL(string: urlString) else {
-            // 유효하지 않은 URL 처리
-            return
-        }
-        
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
+        if let mediaURL = bidPostList?.MediaURL {
+                    playVideo(from: URL(string: mediaURL)!)
                 }
-            }
-        }
+        
+        
     }
 }
+
