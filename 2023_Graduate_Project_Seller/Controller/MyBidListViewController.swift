@@ -55,7 +55,7 @@ class MyBidListViewController: UIViewController {
                 print("name: \(name)") // 회사이름
 
                 companyName = name
-                self.titleLabel.text = "\(name) 사장님께서 낙찰받으신 내역은 다음과 같습니다."
+                self.titleLabel.text = "\(name) 사장님께서 낙찰받으신 내역입니다."
 
                 self.fetchFinishedBids(for: companyName)
             }
@@ -114,10 +114,10 @@ extension MyBidListViewController: UITableViewDataSource {
         let bid = myBidList[indexPath.row]
         let bidPost = bidPostList[indexPath.row]
 
-        cell.titleLabel.text = "견적 : \(bidPost.title)"
+        cell.titleLabel.text = "\(bidPost.title)"
         cell.addressLabel.text = bidPost.address
-        cell.timeLabel.text = "방문요청 :\(bidPost.date)"
-        cell.numberLabel.text = "고객 연락처 :\(bidPost.number)"
+        cell.timeLabel.text = "방문 :\(bidPost.date)"
+        cell.numberLabel.text = "\(bidPost.number)"
 
         cell.selectionStyle = .none
 
