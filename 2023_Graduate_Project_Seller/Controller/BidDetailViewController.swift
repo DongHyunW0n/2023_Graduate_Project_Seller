@@ -163,13 +163,11 @@ class BidDetailViewController: UIViewController {
                   let thumbnailImage = UIImage(cgImage: thumbnailCGImage)
 
                   DispatchQueue.main.async {
-                      // 비동기적으로 이미지 로딩 후 UI 업데이트
                       self.imageView.image = thumbnailImage
                       self.lodingLabel.isHidden = true
                   }
               } catch let error {
                   print("동영상 섬네일을 가져오는 데 실패했습니다: \(error.localizedDescription)")
-                  // (optional) 실패 시 추가적인 처리 가능
               }
           }
       }

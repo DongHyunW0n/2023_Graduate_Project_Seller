@@ -1,8 +1,8 @@
 //
 //  ChatViewController.swift
-//  2023_Graduate_Project_Seller
+//  2023_Graduate_Project
 //
-//  Created by WonDongHyun on 2023/06/03.
+//  Created by WonDongHyun on 2023/06/01.
 //
 
 import UIKit
@@ -47,8 +47,11 @@ class ChatViewController: UIViewController {
         
         chatTableView.dataSource = self
        
-        let nibName = UINib(nibName: "ChatCell", bundle: nil)
-          chatTableView.register(nibName, forCellReuseIdentifier: "Cell")
+        let nibName1 = UINib(nibName: "ChatCell", bundle: nil)
+        chatTableView.register(nibName1, forCellReuseIdentifier: "Cell1")
+
+        let nibName2 = UINib(nibName: "ChatCellSender", bundle: nil)
+        chatTableView.register(nibName2, forCellReuseIdentifier: "Cell2")
 
         
         
@@ -161,28 +164,32 @@ extension ChatViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = chatTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ChatCell
-        let celldata : ChatMessageEntity = chatList[indexPath.row]
+        
+        let celldata: ChatMessageEntity = chatList[indexPath.row]
+
+        
+        let cellIdentifier: String
+            
+            if celldata.sender == uid {
+                cellIdentifier = "Cell1"
+            } else {
+                cellIdentifier = "Cell2"
+            }
+        
+        let cell = chatTableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ChatCell
         cell.selectionStyle = .none
         
        
         
         if celldata.sender == uid {
-            cell.timeLabel.textAlignment = .right
-            cell.detailLabel.textAlignment = .right
+           
 
-
-            cell.detailLabel.text = "사장님 : \(celldata.message)"
+            cell.detailLabel.text = "\(celldata.message)"
             cell.timeLabel.text = celldata.timeStamp
             
         }else{
-            
 
-
-            cell.timeLabel.textAlignment = .left
-            cell.detailLabel.textAlignment = .left
-
-            cell.detailLabel.text = "고객 : \(celldata.message)"
+            cell.detailLabel.text = "\(celldata.message)"
             cell.timeLabel.text = celldata.timeStamp
         }
         
@@ -195,3 +202,4 @@ extension ChatViewController : UITableViewDataSource {
     
     
 }
+

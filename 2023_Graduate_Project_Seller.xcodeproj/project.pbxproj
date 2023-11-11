@@ -11,9 +11,10 @@
 		8F3C25012A1EE82300422072 /* MyBidListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3C25002A1EE82300422072 /* MyBidListViewController.swift */; };
 		8F7FDFDF2A2B887E00D56569 /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7FDFDE2A2B887E00D56569 /* ChatListCell.swift */; };
 		8F7FDFE12A2B889200D56569 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7FDFE02A2B889200D56569 /* ChatCell.swift */; };
-		8F7FDFE32A2B88B200D56569 /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7FDFE22A2B88B200D56569 /* ChatCell.xib */; };
 		8F7FDFE52A2B892300D56569 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7FDFE42A2B892300D56569 /* ChatListViewController.swift */; };
 		8F7FDFE72A2B893A00D56569 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7FDFE62A2B893A00D56569 /* ChatViewController.swift */; };
+		8F88A42F2AFFF5F7005B359B /* ChatCellSender.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F88A42E2AFFF5F6005B359B /* ChatCellSender.xib */; };
+		8F88A4312AFFF619005B359B /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F88A4302AFFF619005B359B /* ChatCell.xib */; };
 		8F89ACCE2A2500BE007D681B /* MyBidListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F89ACCD2A2500BE007D681B /* MyBidListDetailViewController.swift */; };
 		8F8E776D2AFE7421001BDB9A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8F8E776C2AFE7421001BDB9A /* FirebaseAnalytics */; };
 		8F8E776F2AFE7421001BDB9A /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 8F8E776E2AFE7421001BDB9A /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -67,9 +68,10 @@
 		8F3C25002A1EE82300422072 /* MyBidListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBidListViewController.swift; sourceTree = "<group>"; };
 		8F7FDFDE2A2B887E00D56569 /* ChatListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListCell.swift; sourceTree = "<group>"; };
 		8F7FDFE02A2B889200D56569 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
-		8F7FDFE22A2B88B200D56569 /* ChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatCell.xib; sourceTree = "<group>"; };
 		8F7FDFE42A2B892300D56569 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		8F7FDFE62A2B893A00D56569 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		8F88A42E2AFFF5F6005B359B /* ChatCellSender.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatCellSender.xib; sourceTree = "<group>"; };
+		8F88A4302AFFF619005B359B /* ChatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChatCell.xib; path = ../../../2023_Graduate_Project/2023_Graduate_Project/Model/Cell/ChatCell.xib; sourceTree = "<group>"; };
 		8F89ACCD2A2500BE007D681B /* MyBidListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBidListDetailViewController.swift; sourceTree = "<group>"; };
 		8F8E77AE2AFE745F001BDB9A /* SOYO Maple Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SOYO Maple Regular.otf"; sourceTree = "<group>"; };
 		8F8E77AF2AFE745F001BDB9A /* SOYO Maple Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SOYO Maple Bold.otf"; sourceTree = "<group>"; };
@@ -179,7 +181,8 @@
 				8F9350E72A1F16AA00784AE3 /* MyBidListCell.swift */,
 				8F7FDFDE2A2B887E00D56569 /* ChatListCell.swift */,
 				8F7FDFE02A2B889200D56569 /* ChatCell.swift */,
-				8F7FDFE22A2B88B200D56569 /* ChatCell.xib */,
+				8F88A4302AFFF619005B359B /* ChatCell.xib */,
+				8F88A42E2AFFF5F6005B359B /* ChatCellSender.xib */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -308,8 +311,9 @@
 				8FD14ED72A18A8780001F4DD /* LaunchScreen.storyboard in Resources */,
 				8F8E77B12AFE745F001BDB9A /* SOYO Maple Bold.otf in Resources */,
 				8FD14ED42A18A8780001F4DD /* Assets.xcassets in Resources */,
-				8F7FDFE32A2B88B200D56569 /* ChatCell.xib in Resources */,
+				8F88A42F2AFFF5F7005B359B /* ChatCellSender.xib in Resources */,
 				8FD14ED22A18A8770001F4DD /* Main.storyboard in Resources */,
+				8F88A4312AFFF619005B359B /* ChatCell.xib in Resources */,
 				8FD14EDF2A18A9930001F4DD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

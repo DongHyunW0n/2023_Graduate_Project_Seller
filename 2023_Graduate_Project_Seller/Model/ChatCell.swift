@@ -9,14 +9,19 @@ import UIKit
 
 class ChatCell: UITableViewCell {
 
-    @IBOutlet weak var bubbleStackView: UIStackView!
+    
+    
+    @IBOutlet weak var chatBubble: UIView!
     @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var yourLogo: UIImageView!
-    @IBOutlet weak var myLogo: UIImageView!
     @IBOutlet weak var detailLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
+        self.selectionStyle = .none
+        self.chatBubble.backgroundColor = UIColor.systemYellow.withAlphaComponent(0.2)
+        self.chatBubble.layer.cornerRadius = 8
+        
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
