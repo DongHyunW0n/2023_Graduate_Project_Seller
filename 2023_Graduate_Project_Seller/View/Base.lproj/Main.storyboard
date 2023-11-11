@@ -122,7 +122,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RGJ-jh-W8o">
-                                <rect key="frame" x="0.0" y="94" width="375" height="56.333333333333343"/>
+                                <rect key="frame" x="0.0" y="94" width="375" height="66.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="견적 요청 리스트" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPZ-js-xFM">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="33.666666666666664"/>
@@ -131,8 +131,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="고객의 정확한 주소와 연락처는 채택 이후에 확인 가능합니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sd1-6k-wNp">
-                                        <rect key="frame" x="0.0" y="41.666666666666657" width="375" height="14.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="41.666666666666657" width="375" height="25"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="YDL-0Y-0aN"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="SOYO-Maple-Regular" family="SOYO Maple" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -140,7 +143,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PvF-e6-d8j">
-                                <rect key="frame" x="0.0" y="160.33333333333331" width="375" height="651.66666666666674"/>
+                                <rect key="frame" x="0.0" y="170.66666666666669" width="375" height="641.33333333333326"/>
                                 <color key="backgroundColor" red="0.97254901959999995" green="0.96862745100000003" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.97254901959999995" green="0.96862745100000003" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -440,7 +443,7 @@
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iIc-gL-zyx">
                                 <rect key="frame" x="0.0" y="181" width="375" height="597"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.96862745100000003" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="153" id="YwN-BP-thv" customClass="MyBidListCell" customModule="_023_Graduate_Project_Seller" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="375" height="153"/>
@@ -774,55 +777,58 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사장님과 매칭된 고객에게 채팅이 가능합니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rik-pI-iJm">
-                                <rect key="frame" x="10" y="94" width="355" height="40"/>
+                                <rect key="frame" x="10" y="94" width="355" height="30"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Oux-fb-8Vx"/>
+                                    <constraint firstAttribute="height" constant="30" id="sUE-kn-HpC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Inh-cU-qg8">
-                                <rect key="frame" x="0.0" y="134" width="375" height="644"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="124" width="375" height="654"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.96862745100000003" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="106" id="XdV-N2-qjO" customClass="ChatListCell" customModule="_023_Graduate_Project_Seller" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="375" height="106"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="156" id="XdV-N2-qjO" customClass="ChatListCell" customModule="_023_Graduate_Project_Seller" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="156"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XdV-N2-qjO" id="yKf-Ow-axD">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="106"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="156"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="고객 연락처" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6F-zY-N4a">
-                                                    <rect key="frame" x="30" y="31" width="85" height="44"/>
-                                                    <fontDescription key="fontDescription" name="SOYO-Maple-Regular" family="SOYO Maple" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="내가 요청한 견적견적견적견적견적견적견적견적견적견적" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5F-RV-wL5">
-                                                    <rect key="frame" x="165" y="31" width="200" height="44"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="방문요청시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDM-ln-Y6X">
-                                                    <rect key="frame" x="297.33333333333331" y="74" width="67.666666666666686" height="15.666666666666671"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="l0N-0P-1X9">
+                                                    <rect key="frame" x="20" y="20" width="335" height="116"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="고객 연락처" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6F-zY-N4a">
+                                                            <rect key="frame" x="0.0" y="0.0" width="90" height="30.666666666666668"/>
+                                                            <fontDescription key="fontDescription" name="SOYO-Maple-Regular" family="SOYO Maple" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="내가 요청한 견적견적견적견적견적견적견적견적견적견적" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5F-RV-wL5">
+                                                            <rect key="frame" x="0.0" y="42.666666666666664" width="335" height="30.666666666666664"/>
+                                                            <fontDescription key="fontDescription" name="SOYO-Maple-Regular" family="SOYO Maple" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="방문요청시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDM-ln-Y6X">
+                                                            <rect key="frame" x="0.0" y="85.333333333333329" width="74.333333333333329" height="30.666666666666671"/>
+                                                            <fontDescription key="fontDescription" name="SOYO-Maple-Regular" family="SOYO Maple" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80.670000000000002" id="rHI-B6-NWZ"/>
+                                                    </constraints>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="r5F-RV-wL5" firstAttribute="top" secondItem="yKf-Ow-axD" secondAttribute="topMargin" constant="20" id="3Ac-LM-JHY"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="r5F-RV-wL5" secondAttribute="bottom" constant="20" id="9Pl-aL-9mW"/>
-                                                <constraint firstItem="r5F-RV-wL5" firstAttribute="leading" secondItem="n6F-zY-N4a" secondAttribute="trailing" constant="50" id="IdY-Ap-X1S"/>
-                                                <constraint firstItem="dDM-ln-Y6X" firstAttribute="top" secondItem="r5F-RV-wL5" secondAttribute="bottom" constant="-1" id="Mpp-bb-Cf4"/>
-                                                <constraint firstItem="n6F-zY-N4a" firstAttribute="leading" secondItem="yKf-Ow-axD" secondAttribute="leadingMargin" constant="10" id="N7W-uY-5RI"/>
-                                                <constraint firstItem="n6F-zY-N4a" firstAttribute="top" secondItem="yKf-Ow-axD" secondAttribute="topMargin" constant="20" id="OVg-gn-tZD"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="n6F-zY-N4a" secondAttribute="bottom" constant="20" id="g5x-kp-axl"/>
-                                                <constraint firstItem="r5F-RV-wL5" firstAttribute="trailing" secondItem="yKf-Ow-axD" secondAttribute="trailingMargin" constant="10" id="kW1-ma-BAY"/>
-                                                <constraint firstItem="dDM-ln-Y6X" firstAttribute="trailing" secondItem="r5F-RV-wL5" secondAttribute="trailing" id="pB5-pI-nfn"/>
+                                                <constraint firstItem="l0N-0P-1X9" firstAttribute="leading" secondItem="yKf-Ow-axD" secondAttribute="leading" constant="20" id="Lfp-oZ-lxQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="l0N-0P-1X9" secondAttribute="trailing" constant="20" id="SYY-yN-Xas"/>
+                                                <constraint firstItem="l0N-0P-1X9" firstAttribute="top" secondItem="yKf-Ow-axD" secondAttribute="top" constant="20" id="e3P-bB-ect"/>
+                                                <constraint firstAttribute="bottom" secondItem="l0N-0P-1X9" secondAttribute="bottom" constant="20" id="jmq-JH-9VE"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -837,13 +843,13 @@
                         <viewLayoutGuide key="safeArea" id="PiW-yE-Bjr"/>
                         <color key="backgroundColor" red="0.97254901959999995" green="0.96862745100000003" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="PiW-yE-Bjr" firstAttribute="bottom" secondItem="Inh-cU-qg8" secondAttribute="bottom" id="O8Q-i0-qlY"/>
-                            <constraint firstItem="rik-pI-iJm" firstAttribute="leading" secondItem="PiW-yE-Bjr" secondAttribute="leading" constant="10" id="UvW-Jk-nHs"/>
-                            <constraint firstItem="rik-pI-iJm" firstAttribute="top" secondItem="PiW-yE-Bjr" secondAttribute="top" id="WRF-jj-xyn"/>
-                            <constraint firstItem="Inh-cU-qg8" firstAttribute="top" secondItem="rik-pI-iJm" secondAttribute="bottom" id="Zz6-gA-OHp"/>
-                            <constraint firstItem="Inh-cU-qg8" firstAttribute="leading" secondItem="PiW-yE-Bjr" secondAttribute="leading" id="dS9-jU-GRw"/>
-                            <constraint firstItem="PiW-yE-Bjr" firstAttribute="trailing" secondItem="rik-pI-iJm" secondAttribute="trailing" constant="10" id="quQ-l6-Fj3"/>
-                            <constraint firstItem="PiW-yE-Bjr" firstAttribute="trailing" secondItem="Inh-cU-qg8" secondAttribute="trailing" id="zGs-js-kCn"/>
+                            <constraint firstItem="Inh-cU-qg8" firstAttribute="trailing" secondItem="PiW-yE-Bjr" secondAttribute="trailing" id="07d-st-IGQ"/>
+                            <constraint firstItem="PiW-yE-Bjr" firstAttribute="trailing" secondItem="rik-pI-iJm" secondAttribute="trailing" constant="10" id="4Jt-AZ-fH4"/>
+                            <constraint firstItem="Inh-cU-qg8" firstAttribute="bottom" secondItem="PiW-yE-Bjr" secondAttribute="bottom" id="QwZ-gp-LID"/>
+                            <constraint firstItem="rik-pI-iJm" firstAttribute="leading" secondItem="PiW-yE-Bjr" secondAttribute="leading" constant="10" id="VT0-8N-FlO"/>
+                            <constraint firstItem="Inh-cU-qg8" firstAttribute="leading" secondItem="PiW-yE-Bjr" secondAttribute="leading" id="pE3-pn-hRZ"/>
+                            <constraint firstItem="Inh-cU-qg8" firstAttribute="top" secondItem="rik-pI-iJm" secondAttribute="bottom" id="sw3-9H-6nq"/>
+                            <constraint firstItem="rik-pI-iJm" firstAttribute="top" secondItem="PiW-yE-Bjr" secondAttribute="top" id="wVe-Hk-fuT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yIU-Sw-PFE"/>
@@ -853,7 +859,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="biU-M8-Uvz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3091" y="1113"/>
+            <point key="canvasLocation" x="-3092" y="1112.807881773399"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="8sd-6R-U84">
