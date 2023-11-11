@@ -6,15 +6,17 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class MyBidListDetailViewController: UIViewController {
 
-    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var detailLabel: UITextView!
+    @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     
+    @IBOutlet weak var thumbNailImage: UIImageView!
     
     var bidPostList: BidPostEntity?
 
@@ -39,6 +41,11 @@ class MyBidListDetailViewController: UIViewController {
             }
         }
 
+    @IBAction func playButton(_ sender: UIButton) {
+        
+        
+        
+    }
 }
 
 
