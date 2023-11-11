@@ -9,6 +9,8 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 import FirebaseAuth
+import AVKit
+import AVFoundation
 
 class BidDetailViewController: UIViewController {
     @IBOutlet weak var BidWritetextField: UITextView!
@@ -16,7 +18,7 @@ class BidDetailViewController: UIViewController {
     
     @IBOutlet weak var dateStackView: UIStackView!
     @IBOutlet weak var placeStackView: UIStackView!
-    @IBOutlet weak var detailLabel: UITextView!
+    @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var detailStackView: UIStackView!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var placeLabel: UILabel!
@@ -30,24 +32,7 @@ class BidDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        BidWritetextField.layer.borderWidth = 1.0 // 경계선 두께 설정
-
-        BidWritetextField.layer.borderColor = UIColor.systemGray3.cgColor
-        
-        placeStackView.layer.borderWidth = 0.5 // 경계선 두께 설정
-
-        placeStackView.layer.borderColor = UIColor.systemGray3.cgColor
-        placeStackView.layer.cornerRadius = 10
-        
-        dateStackView.layer.borderWidth = 0.5 // 경계선 두께 설정
-
-        dateStackView.layer.borderColor = UIColor.systemGray3.cgColor
-        dateStackView.layer.cornerRadius = 10
-        
-        detailStackView.layer.borderWidth = 0.5 // 경계선 두께 설정
-
-        detailStackView.layer.borderColor = UIColor.systemGray3.cgColor
-        detailStackView.layer.cornerRadius = 10
+     setUI()
         
         timeLabel.text = bidListEntity?.date
         
@@ -93,9 +78,9 @@ class BidDetailViewController: UIViewController {
         
         detailLabel.text = bidListEntity?.title
         
-        if let imageURL = bidListEntity?.imageURL {
-            imageView.loadImageFromURL(imageURL)
-        }
+        if let mediaURL = bidListEntity?.mediaURL {
+               loadVideoThumbnail(from: URL(string: mediaURL)!)
+           }
         
     }
     
@@ -155,6 +140,40 @@ class BidDetailViewController: UIViewController {
         }
     }
     
+    @IBAction func playVideoButton(_ sender: UIButton) {
+        
+        if let mediaURL = bidListEntity?.mediaURL {
+               playVideo(from: URL(string: mediaURL)!)
+           }
+        
+        
+    }
+    func loadVideoThumbnail(from videoURL: URL) {
+        let asset = AVAsset(url: videoURL)
+        let assetGenerator = AVAssetImageGenerator(asset: asset)
+        
+        assetGenerator.appliesPreferredTrackTransform = true
+        
+        do {
+            let thumbnailCGImage = try assetGenerator.copyCGImage(at: CMTimeMake(value: 1, timescale: 60), actualTime: nil)
+            let thumbnailImage = UIImage(cgImage: thumbnailCGImage)
+            imageView.image = thumbnailImage
+        } catch let error {
+            print("동영상 섬네일을 가져오는 데 실패했습니다: \(error.localizedDescription)")
+        }
+    }
+    
+    func playVideo(from videoURL: URL) {
+        let player = AVPlayer(url: videoURL)
+        let playerViewController = AVPlayerViewController()
+        
+        playerViewController.player = player
+        
+        present(playerViewController, animated: true) {
+            playerViewController.player?.play()
+        }
+    }
+    
     fileprivate func presentAlert () {
         
         let alert = UIAlertController(title: "완료", message: "등록 완료 되었습니다." , preferredStyle: .alert)
@@ -164,26 +183,13 @@ class BidDetailViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
         
     }
-}
-
-
-extension UIImageView {
-    func loadImageFromURL(_ urlString: String) {
-        guard let url = URL(string: urlString) else {
-            // 유효하지 않은 URL 처리
-            return
-        }
+    
+    func setUI(){
         
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
-        }
+      
     }
 }
+
+
 
 

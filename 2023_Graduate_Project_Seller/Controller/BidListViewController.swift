@@ -15,7 +15,7 @@ struct BidListEntity {
     var id : String
     var title : String
     var address : String
-    var imageURL : String
+    var mediaURL : String
     var date : String
     
     
@@ -53,10 +53,10 @@ class BidViewController: UIViewController {
                 
                 let title = value?["상세 설명"] as? String ?? ""
                 let address = value?["요청 위치"] as? String ?? ""
-                let URL = value?["사진 URL"] as? String ?? ""
+                let URL = value?["MediaURL"] as? String ?? ""
                 let date = value?["요청 일시"] as? String ?? ""
                 
-                let fetchedBidList = BidListEntity(id: childSnapshot.key, title: title, address: address, imageURL: URL, date: date)
+                let fetchedBidList = BidListEntity(id: childSnapshot.key, title: title, address: address, mediaURL: URL, date: date)
                 self.BidList.append(fetchedBidList)
                 
                 print(title)

@@ -22,9 +22,9 @@ class MyBidListDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let imageURL = bidPostList?.imageURL {
-            imageView.loadImageFromURL(imageURL)
-        }
+//        if let imageURL = bidPostList?.imageURL {
+//            imageView.loadImageFromURL(imageURL)
+//        }
         updateUI()
 
     }
