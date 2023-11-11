@@ -18,7 +18,7 @@ class ChatCell: UITableViewCell {
         super.awakeFromNib()
 
         self.selectionStyle = .none
-        self.chatBubble.backgroundColor = UIColor.systemYellow.withAlphaComponent(0.2)
+        self.chatBubble.backgroundColor = UIColor.systemGreen.withAlphaComponent(0.2)
         self.chatBubble.layer.cornerRadius = 8
         
 
