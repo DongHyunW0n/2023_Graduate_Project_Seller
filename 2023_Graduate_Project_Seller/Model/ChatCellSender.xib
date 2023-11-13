@@ -27,7 +27,7 @@
                         <rect key="frame" x="10" y="10" width="280" height="101"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="Gcd-tc-l6P">
-                                <rect key="frame" x="0.0" y="6.3333333333333357" width="280" height="94.666666666666657"/>
+                                <rect key="frame" x="0.0" y="5.6666666666666643" width="280" height="95.333333333333343"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tpm-Lk-9Wk">
                                         <rect key="frame" x="0.0" y="0.0" width="261" height="67.666666666666671"/>
@@ -48,7 +48,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upd-VP-NOt">
-                                        <rect key="frame" x="0.0" y="80.666666666666671" width="29.666666666666668" height="14"/>
+                                        <rect key="frame" x="0.0" y="80.666666666666657" width="33.333333333333336" height="14.666666666666671"/>
                                         <fontDescription key="fontDescription" name="SOYO-Maple-Regular" family="SOYO Maple" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -66,6 +66,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.97254901959999995" green="0.96862745100000003" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="chatBubble" destination="Tpm-Lk-9Wk" id="Gd8-SR-BeA"/>
                 <outlet property="detailLabel" destination="ik8-b6-e36" id="ciV-CY-87T"/>
